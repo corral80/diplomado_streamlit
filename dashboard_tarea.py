@@ -33,19 +33,25 @@ st.markdown(
         border-radius: 10px;
         min-height: 120px;
     }
-    div[data-testid="stMetricLabel"] {
+    div[data-testid="stMetricLabel"],
+    div[data-testid="stMetricLabel"] *,
+    div[data-testid="stMetricLabel"] p {
         font-size: 0.88rem;
         line-height: 1.2;
         white-space: normal !important;
         color: #1f2937 !important;
     }
-    div[data-testid="stMetricValue"] {
+    div[data-testid="stMetricValue"],
+    div[data-testid="stMetricValue"] *,
+    div[data-testid="stMetricValue"] p {
         font-size: 1.05rem;
         line-height: 1.15;
         white-space: normal !important;
         color: #111827 !important;
     }
-    div[data-testid="stMetricDelta"] {
+    div[data-testid="stMetricDelta"],
+    div[data-testid="stMetricDelta"] *,
+    div[data-testid="stMetricDelta"] p {
         font-size: 0.82rem;
         white-space: normal !important;
         color: #059669 !important;
