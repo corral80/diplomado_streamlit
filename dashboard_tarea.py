@@ -33,6 +33,9 @@ st.markdown(
         border-radius: 10px;
         min-height: 120px;
     }
+    div[data-testid="stMetric"] * {
+        color: #111827 !important;
+    }
     div[data-testid="stMetricLabel"],
     div[data-testid="stMetricLabel"] *,
     div[data-testid="stMetricLabel"] p {
