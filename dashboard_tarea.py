@@ -37,15 +37,18 @@ st.markdown(
         font-size: 0.88rem;
         line-height: 1.2;
         white-space: normal !important;
+        color: #1f2937 !important;
     }
     div[data-testid="stMetricValue"] {
         font-size: 1.05rem;
         line-height: 1.15;
         white-space: normal !important;
+        color: #111827 !important;
     }
     div[data-testid="stMetricDelta"] {
         font-size: 0.82rem;
         white-space: normal !important;
+        color: #059669 !important;
     }
     </style>
     """,
@@ -112,7 +115,6 @@ metrica_producto = st.sidebar.radio(
 )
 
 mostrar_tendencia = st.sidebar.checkbox("Mostrar media movil", value=True)
-mostrar_tabla = st.sidebar.checkbox("Mostrar tabla resumen", value=False)
 
 df_filtrado = df[
     (df["Date"].dt.date >= fecha_inicio)
@@ -337,18 +339,3 @@ with fila4_col1:
 
 with fila4_col2:
     mostrar_grafico_libre(df_filtrado)
-
-if mostrar_tabla:
-    st.subheader("Tabla resumen de datos filtrados")
-    columnas_tabla = [
-        "Invoice ID",
-        "Branch",
-        "Customer type",
-        "Product line",
-        "Payment",
-        "Total",
-        "gross income",
-        "Rating",
-        "Date",
-    ]
-    st.dataframe(df_filtrado[columnas_tabla], use_container_width=True)
